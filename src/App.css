@@ -9,7 +9,7 @@
   --accent-four: #A0AECD;
   --large-font: 2.4rem;
   --medium-font: 2rem;
-  --small-font: 1.4rem;
+  --small-font: 1.2rem;
   --very-large-font: 4.5rem;
   --very-small-font: 1rem;
   --nav-height: 4.5rem;
@@ -61,8 +61,46 @@ nav span.badge {
 
 .cart .cart-product-view .cart-view-row{
   height: 12rem;
+  padding: 2rem;
 }
 
+.cart .cart-product-view .cart-view-row .image{
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.cart .cart-product-view .cart-view-row .cart-product-description{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--small-font);
+}
+
+.cart .cart-product-view .cart-view-row .cart-product-description .quantity-container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 1.5rem;
+}
+
+.cart .cart-product-view .cart-view-row .cart-product-description button{
+  height: 50%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cart .cart-product-view .cart-view-row .cart-product-description *{
+  margin: .5rem 0rem;
+  justify-content: center;
+  display: flex;
+}
 
 .medium-font-size{
   font-size: var(--medium-font) !important;

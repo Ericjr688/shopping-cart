@@ -3,6 +3,8 @@ import React, { useState, useEffect }  from 'react'
 export default function Product(props) {
   const [ quantity, setQuantity ] = useState(1);
 
+  // set quantity from here
+  
   function btnClickHandler(){
     let product = {...props}
     product.quantity = quantity;
@@ -12,7 +14,7 @@ export default function Product(props) {
 
   return (
     <div className="col s12 m6 l4">
-      <div className="card large">
+      <div className="card large hoverable">
         <div className="card-image">
           <img src={props.image.src} alt={props.image.alt} />
         </div>

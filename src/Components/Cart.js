@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ProductCartView from './ProductCartView'
 
 export default function Cart(props) {
+
+  const [ total, setTotal ] = useState(0);
+
+  useEffect(() => {
+    let sum = 0;
+    let tempCart = [...props.cart]
+    for ( let i in tempCart ) {
+      sum += (tempCart[i].quantity * tempCart[i].price);
+    };
+    sum = Math.round(sum * 100) / 100;
+    setTotal(sum);
+  });
+
 
   return (
     <div className="cart blue-grey lighten-5 z-depth-1">
@@ -13,14 +26,14 @@ export default function Cart(props) {
       </div>
       <div className='row cart-product-view'>
         {props.cart.map((product, index) => (
-          <ProductCartView title={product.title} key={product.id} id={product.id} image={product.image} price={product.price} quantity={product.quantity}/>
+          <ProductCartView title={product.title} increase = {props.increase} decrease = {props.decrease} key={product.id} id={product.id} image={product.image} price={product.price} quantity={product.quantity}/>
         ))}
       </div>
       <div className='row'>
-        <h5 className='col s12 center'>Total: $</h5>
+        <h5 className='col s12 center'>Total: ${total}</h5>
       </div>
       <div className='row'>
-        <a href='#' className="waves-effect waves-light btn-large col s12 medium-font-size blue-grey-text text-darken-4">Checkout</a>
+        <a href='#' className="waves-effect waves-light btn-large col s12 medium-font-size blue-grey-text text-darken-4 green darken-1">Checkout</a>
       </div>
       
     </div>

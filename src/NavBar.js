@@ -10,7 +10,7 @@ export default function NavBar(props) {
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/shop'>Shop</Link></li>
           <li className='shopping-cart-icon' onClick={props.toggleCart}>
-            <span className='badge blue-grey lighten-5 circle'>3</span>
+            <span className='badge blue-grey lighten-5 circle'>{props.totalQuantity}</span>
             <i className="material-icons">shopping_cart</i>
           </li>
         </ul>

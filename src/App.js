@@ -24,7 +24,7 @@ function App() {
     },
     {
       id: 1, 
-      title: `Women's Rain Jacket`, 
+      title: `Women's Jacket`, 
       img: {
         src: womenRainJacket,
         alt: 'women rain jacket',
@@ -42,7 +42,7 @@ function App() {
     },
     {
       id: 3, 
-      title: `Women's Short Sleve`, 
+      title: `Women's Tee`, 
       img: {
         src: womenShortSleve,
         alt: 'women shortsleve',
@@ -54,6 +54,7 @@ function App() {
   const [products, setProducts] = useState(PRODUCTS.slice(0));
   const [cart, setCart] = useState([]);
   const [showCart, setShowCart] = useState('hide');
+  const [totalQuantity, setTotalQuantity] = useState(0);
 
   function toggleCart() {
     if ( showCart === 'show' ) {
@@ -67,6 +68,7 @@ function App() {
     let tempCart = [...cart];
     return tempCart;
   }
+
   function addProductToCart(shopProduct) {
     let tempCart = getCart();
     let product = {...shopProduct};
@@ -84,14 +86,50 @@ function App() {
       if (product.title === tempCart[i].title && tempCart[i].quantity >= 1){
         tempCart[i].quantity+= product.quantity;
         setCart(tempCart)
-      }  
-    }
+      };  
+    };
+  };
 
+  function getTotalQuantity() {
+    let sum = 0;
+    let tempCart = [...cart]
+    for ( let i in tempCart ) {
+      sum += (tempCart[i].quantity);
+    };
+    setTotalQuantity(sum);
+  };
+
+  function increaseProductQuantity(shopProduct){
+    let tempCart = getCart();
+    let product = {...shopProduct};
+
+    for (let i in tempCart) {
+      if (product.title === tempCart[i].title){
+        tempCart[i].quantity++;
+        setCart(tempCart)
+      };  
+    };
   }
+
+  function decreaseProductQuantity(shopProduct){
+    let tempCart = getCart();
+    let product = {...shopProduct};
+
+    for (let i in tempCart) {
+      if (product.title === tempCart[i].title && tempCart[i].quantity > 1){
+        tempCart[i].quantity--;
+        setCart(tempCart)
+      };  
+    };
+  }
+
+  useEffect(() => {
+    getTotalQuantity();
+  })
 
   return (
     <BrowserRouter>
-      <NavBar toggleCart={toggleCart}/>
+      <NavBar toggleCart={toggleCart} totalQuantity= {totalQuantity} />
       {/* {cart.map((product, index) => (
           <p key={product.id}>{product.title}  id={product.id} price={product.price} quantity={product.quantity}</p>
         ))} */}
@@ -99,7 +137,7 @@ function App() {
         <Route path='/' element={<Home />}/>
         <Route path='/shop' element={<Shop products={products} addProductToCart={addProductToCart}/>}/>
       </Routes>
-      { showCart === 'show' ? <Cart toggleCart={toggleCart} cart={cart}/> : null}
+      { showCart === 'show' ? <Cart toggleCart={toggleCart} cart={cart} increase = {increaseProductQuantity} decrease = {decreaseProductQuantity}/> : null}
     </BrowserRouter>
   );
 }
