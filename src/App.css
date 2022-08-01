@@ -1,0 +1,69 @@
+:root{
+  box-sizing: border-box;
+  --main-font: "Poppins", sans-serif;
+  --font-color: #272e30;
+  --bg-color: whitesmoke;
+  --accent-one: #343e40;
+  --accent-two: #7DA2A9;
+  --accent-three: whitesmoke;
+  --accent-four: #A0AECD;
+  --large-font: 2.4rem;
+  --medium-font: 2rem;
+  --small-font: 1.4rem;
+  --very-large-font: 4.5rem;
+  --very-small-font: 1rem;
+  --nav-height: 4.5rem;
+}
+
+nav div.nav-wrapper .large-font-size {
+  font-size: var(--large-font);
+}
+
+nav {
+  margin-bottom: 2rem;
+  height:var(--nav-height)
+}
+
+nav div.nav-wrapper .shopping-cart-icon {
+  cursor: pointer;
+  padding: 0 .8rem;
+}
+
+nav div.nav-wrapper .shopping-cart-icon:hover {
+  background-color: #263238;
+}
+
+nav span.badge {
+  position: absolute;
+  top: 10px;
+}
+
+.cart {
+  height: 100vh;
+  width: max(35vw, 400px);
+  position: fixed;
+  top: 0;
+  right:0;
+  padding: 0 2.2rem;
+}
+
+.cart #cart-close{
+  position: absolute;
+  cursor: pointer;
+  top:2rem;
+  right:0;
+}
+
+.cart .cart-product-view{
+  overflow-y: scroll;
+  max-height: 60%;
+}
+
+.cart .cart-product-view .cart-view-row{
+  height: 12rem;
+}
+
+
+.medium-font-size{
+  font-size: var(--medium-font) !important;
+}
