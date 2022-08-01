@@ -12,6 +12,10 @@ import womenShortSleve  from "./images/women-short-sleeve.jpg"
 import Cart from './Components/Cart';
 
 function App() {
+  useEffect(() => {
+    getTotalQuantity();
+  })
+  
   const PRODUCTS = [
     {
       id: 0, 
@@ -119,13 +123,14 @@ function App() {
       if (product.title === tempCart[i].title && tempCart[i].quantity > 1){
         tempCart[i].quantity--;
         setCart(tempCart)
-      };  
+      }else if ( product.title === tempCart[i].title && tempCart[i].quantity === 1) {
+        tempCart = tempCart.filter ((prod) => {
+          return prod.title !== product.title
+        })
+        setCart(tempCart)
+      } 
     };
   }
-
-  useEffect(() => {
-    getTotalQuantity();
-  })
 
   return (
     <BrowserRouter>
@@ -143,3 +148,10 @@ function App() {
 }
 
 export default App;
+
+
+//proper homepage
+// delete button for cart products
+// more products
+// possibly set quantity from shop page. not needed but easy
+// possibly pages for individual products. see param in route video
