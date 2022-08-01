@@ -33,7 +33,7 @@ export default function Cart(props) {
         <h5 className='col s12 center'>Total: ${total}</h5>
       </div>
       <div className='row'>
-        <a href='#' className="waves-effect waves-light btn-large col s12 medium-font-size blue-grey-text text-darken-4 green darken-1">Checkout</a>
+        <a href='#' className="waves-effect waves-light btn-large col s12 medium-font-size blue-grey darken-4 blue-grey-text text-lighten-5">Checkout</a>
       </div>
       
     </div>

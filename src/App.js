@@ -9,6 +9,10 @@ import menSlimfit  from "./images/men-slim-fit.jpg"
 import womenRainJacket  from "./images/women-rain-jacket.jpg"
 import menJacket  from "./images/men-jacket.jpg"
 import womenShortSleve  from "./images/women-short-sleeve.jpg"
+import backpack from "./images/backpack.jpg"
+import menCasual from "./images/men-casual.jpg"
+import womenWhiteTee from "./images/women-white-tee.jpg"
+
 import Cart from './Components/Cart';
 
 function App() {
@@ -52,6 +56,33 @@ function App() {
         alt: 'women shortsleve',
       },
       price: 17.29,
+    },
+    {
+      id: 4, 
+      title: `Women's W-Tee`, 
+      img: {
+        src: womenWhiteTee,
+        alt: 'women white tee',
+      },
+      price: 9.99,
+    },
+    {
+      id: 5, 
+      title: `Backpack`, 
+      img: {
+        src: backpack,
+        alt: 'women backpack',
+      },
+      price: 14.99,
+    },
+    {
+      id: 6, 
+      title: `Men's Casual`, 
+      img: {
+        src: menCasual,
+        alt: 'men casual',
+      },
+      price: 12.59,
     },
   ];
 
@@ -151,7 +182,8 @@ export default App;
 
 
 //proper homepage
-// delete button for cart products
-// more products
+// clear cart
+// cleanup and comment
+
 // possibly set quantity from shop page. not needed but easy
 // possibly pages for individual products. see param in route video
