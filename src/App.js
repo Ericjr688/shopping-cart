@@ -16,10 +16,12 @@ import womenWhiteTee from "./images/women-white-tee.jpg"
 import Cart from './Components/Cart';
 
 function App() {
+  // Gets the total quantity for the cart icon on initial load and every subsequent update
   useEffect(() => {
     getTotalQuantity();
   })
   
+  // Product objects
   const PRODUCTS = [
     {
       id: 0, 
@@ -86,6 +88,7 @@ function App() {
     },
   ];
 
+
   const [products, setProducts] = useState(PRODUCTS.slice(0));
   const [cart, setCart] = useState([]);
   const [showCart, setShowCart] = useState('hide');
@@ -99,11 +102,13 @@ function App() {
     }
   }
 
+  // creates and returns an array containing the items from the current cart without mutating the original one
   function getCart(){
     let tempCart = [...cart];
     return tempCart;
   }
 
+  
   function addProductToCart(shopProduct) {
     let tempCart = getCart();
     let product = {...shopProduct};
@@ -184,6 +189,8 @@ export default App;
 //proper homepage
 // clear cart
 // cleanup and comment
+// transitions and smoothen out css especially in cart
+// learn good developing and gitHub practices and add them to project
 
 // possibly set quantity from shop page. not needed but easy
 // possibly pages for individual products. see param in route video

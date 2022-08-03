@@ -5,6 +5,7 @@ export default function Cart(props) {
 
   const [ total, setTotal ] = useState(0);
 
+  // Gets the sum of the productes in the cart on initial load and every subsequent update
   useEffect(() => {
     let sum = 0;
     let tempCart = [...props.cart]
