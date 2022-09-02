@@ -17,6 +17,7 @@
 
 nav div.nav-wrapper .large-font-size {
   font-size: var(--large-font);
+  font-weight: 600;
 }
 
 nav {
@@ -37,6 +38,33 @@ nav span.badge {
   position: absolute;
   top: 10px;
 }
+
+/* Homepage */
+.homepage .left {
+  margin-bottom: 3rem;
+  font-size: max(2.5rem, 3.5vw);
+  font-weight: 700;
+}
+
+.homepage .left button{
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  height:100%;
+}
+
+.homepage {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  width: min(95%, 1300px);
+}
+
+.homepage .right img {
+  border-radius: 2rem;
+  max-height: 350px;
+}
+
 
 .cart {
   height: 100vh;
@@ -105,4 +133,11 @@ nav span.badge {
 
 .medium-font-size{
   font-size: var(--medium-font) !important;
+}
+
+@media ( max-width: 992px ) {
+  .homepage .left *{
+    text-align: center;
+    
+  }
 }
