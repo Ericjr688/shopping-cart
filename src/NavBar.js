@@ -6,7 +6,7 @@ export default function NavBar(props) {
     <nav className='blue-grey darken-3 blue-grey-text text-lighten-5'>
       <div className='nav-wrapper container'>
         <Link className='brand-logo left large-font-size' to='/'>Fake Store</Link>
-        <ul id="nav-mobile" className="right">
+        <ul id="nav-mobile" className="right blue-grey darken-3">
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/shop'>Shop</Link></li>
           <li className='shopping-cart-icon' onClick={props.toggleCart}>

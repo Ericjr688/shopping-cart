@@ -37,6 +37,11 @@ nav div.nav-wrapper .shopping-cart-icon:hover {
 nav span.badge {
   position: absolute;
   top: 10px;
+  font-weight: 500;
+}
+
+nav ul.right a{
+  font-size: 1.2rem;
 }
 
 /* Homepage */
@@ -68,11 +73,15 @@ nav span.badge {
 
 .cart {
   height: 100vh;
-  width: max(35vw, 400px);
+  width: max(40vw, 400px);
   position: fixed;
   top: 0;
   right:0;
   padding: 0 2.2rem;
+}
+
+.cart h4, .cart h5, .cart a {
+  font-weight: 700;
 }
 
 .cart #cart-close{
@@ -87,9 +96,15 @@ nav span.badge {
   max-height: 60%;
 }
 
+.cart .cart-product-view .cart-p-title{
+  font-weight: 700;
+}
+
 .cart .cart-product-view .cart-view-row{
   height: 12rem;
   padding: 2rem;
+  overflow: hidden;
+  background-color: inherit;
 }
 
 
@@ -106,18 +121,16 @@ nav span.badge {
   display: flex;
   flex-direction: column;
   font-size: var(--small-font);
+  justify-content: center;
 }
 
 .cart .cart-product-view .cart-view-row .cart-product-description .quantity-container{
-  height: 100%;
-  display: flex;
-  align-items: center;
-  margin: 0;
+  height: 2rem;
   gap: 1.5rem;
 }
 
 .cart .cart-product-view .cart-view-row .cart-product-description button{
-  height: 50%;
+  height: 100%;
   width: 20%;
   display: flex;
   align-items: center;
@@ -126,7 +139,7 @@ nav span.badge {
 }
 
 .cart .cart-product-view .cart-view-row .cart-product-description *{
-  margin: .5rem 0rem;
+  margin: .4rem 0rem;
   justify-content: center;
   display: flex;
 }
@@ -135,9 +148,62 @@ nav span.badge {
   font-size: var(--medium-font) !important;
 }
 
+.product-container .card-content .card-title{
+  font-weight: 500;
+}
+
+.product-container .card-content .product-price{
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.product-container .card-action button{
+  font-weight: 500;
+}
+
 @media ( max-width: 992px ) {
   .homepage .left *{
     text-align: center;
     
+  }
+}
+
+@media (max-width: 500px ) {
+  :root {
+    --nav-height: 3.8rem;
+  }
+
+  #nav-mobile {
+    position:fixed;
+    top: var(--nav-height);
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    float: none !important;
+    gap: 1rem;
+  }
+
+  nav{
+    position: fixed;
+    z-index: 2;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav .brand-logo {
+    justify-self: center;
+    left: auto;
+  }
+
+  .background, .shop {
+    padding-top: 8.5rem;
+  }
+
+  .cart {
+    z-index: 3;
+    width: 100vw;
   }
 }

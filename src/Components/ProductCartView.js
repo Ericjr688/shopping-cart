@@ -22,7 +22,7 @@ export default function ProductCartView(props) {
       <div className='col s8 right cart-product-description'>
         <p className=' cart-p-title '>{props.title}</p>
         <p className=' cart-p-price'>${props.price}</p>
-        <div className='row quantity-container'>
+        <div className='quantity-container center'>
           <button className='q-button' onClick={decreaseQuantityBtnHandler} ><i className="material-icons">remove</i></button>
           <div className=''>{props.quantity }</div>
           <button className='q-button' onClick={increaseQuantityBtnHandler} ><i className="material-icons">add</i></button>

@@ -20,13 +20,14 @@ export default function Product(props) {
         </div>
         <div className="card-content">
           <span className="card-title">{props.title}</span>
-          <p>${props.price}</p>
+          <p className='product-price'>${props.price}</p>
         </div>
         <div className="card-action">
           <button 
             type='button'
             className="btn-large col s12 blue-grey darken-4 blue-grey-text text-lighten-5" 
-            onClick={btnClickHandler}>Add to Cart
+            onClick={btnClickHandler}>
+              Add to Cart
           </button>
         </div>
       </div>

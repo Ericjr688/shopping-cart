@@ -4,7 +4,7 @@ import Product from '../Components/Product'
 
 export default function Shop(props) {
   return (
-    <div className='container'>
+    <div className='shop container'>
       <div className='product-container'>
         <div className='row'>
           {props.products.map((product, index) => (
