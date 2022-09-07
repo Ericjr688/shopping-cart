@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.64b52b6b.css",
+    "main.js": "/shopping-cart/static/js/main.4898d898.js",
+    "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
+    "static/media/wallpaper.png": "/shopping-cart/static/media/wallpaper.4beffe26c34860582c45.png",
+    "static/media/wallpaper.jpg": "/shopping-cart/static/media/wallpaper.38da2ec7e43e300f39af.jpg",
+    "static/media/backpack.jpg": "/shopping-cart/static/media/backpack.474294d3c9f202fd43b9.jpg",
+    "static/media/men-slim-fit.jpg": "/shopping-cart/static/media/men-slim-fit.746b26761fd8addf8ad8.jpg",
+    "static/media/men-jacket.jpg": "/shopping-cart/static/media/men-jacket.3f14b9bd3d076452d15f.jpg",
+    "static/media/men-casual.jpg": "/shopping-cart/static/media/men-casual.1b6b8ca6875cdfba64a1.jpg",
+    "static/media/women-rain-jacket.jpg": "/shopping-cart/static/media/women-rain-jacket.e9b446ab3d5efecc84b7.jpg",
+    "static/media/women-white-tee.jpg": "/shopping-cart/static/media/women-white-tee.bc5fcfc3900c1c779da5.jpg",
+    "static/media/women-short-sleeve.jpg": "/shopping-cart/static/media/women-short-sleeve.95eb26a3dcbe916bc7c5.jpg",
+    "index.html": "/shopping-cart/index.html",
+    "main.64b52b6b.css.map": "/shopping-cart/static/css/main.64b52b6b.css.map",
+    "main.4898d898.js.map": "/shopping-cart/static/js/main.4898d898.js.map",
+    "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64b52b6b.css",
+    "static/js/main.4898d898.js"
+  ]
+}
