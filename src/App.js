@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import NavBar from './NavBar';
 import Home from './Pages/Home';
 import Shop from './Pages/Shop';
@@ -169,7 +169,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <NavBar toggleCart={toggleCart} totalQuantity= {totalQuantity} />
       {/* {cart.map((product, index) => (
           <p key={product.id}>{product.title}  id={product.id} price={product.price} quantity={product.quantity}</p>
@@ -179,7 +179,7 @@ function App() {
         <Route path='/shop' element={<Shop products={products} addProductToCart={addProductToCart}/>}/>
       </Routes>
       { showCart === 'show' ? <Cart toggleCart={toggleCart} cart={cart} increase = {increaseProductQuantity} decrease = {decreaseProductQuantity}/> : null}
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

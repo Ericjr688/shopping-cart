@@ -193,7 +193,7 @@ nav ul.right a{
     justify-content: center;
   }
 
-  nav .brand-logo {
+  nav .brand-logo.left {
     justify-self: center;
     left: auto;
   }
